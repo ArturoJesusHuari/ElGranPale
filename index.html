@@ -1,0 +1,397 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="./imgs/logo.svg" type="image/x-icon">
+  <title>Hotel - El gran palé</title>
+  <meta name="description" content="Hotel el gran palé de huancayo. Tu hogar lejos del hogar. ">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/64f1b365fc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div>
+    <header class="flex flex-col lg:flex-row justify-between items-center px-4 py-5 w-full bg-black">
+      <div class="flex w-full lg:w-auto items-center justify-between">
+        <a href="/" class="text-lg">
+          <img width="120" src="./imgs/logo.png" alt="logo.png">
+        </a>
+        <div class="block lg:hidden mr-6">
+          <button id="astronav-menu" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars text-white text-2xl"></i>
+          </button>
+        </div>
+      </div>
+      <nav class="astronav-items astronav-toggle mx-4 hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0 flex-col">
+        <ul class="flex lg:flex-row lg:gap-3 mb-3">
+          <li class="text-gray-400 items-center">
+            <i class="fa-solid fa-mobile-screen mx-3"></i>
+            <span>956 113 939</span>
+          </li>
+          <li class="text-gray-400 items-center">
+            <i class="fa-solid fa-location-dot mx-3"></i>
+            <span>
+              Jr. Piura 633 / Arequipa Huancayo. , Huancayo, Peru
+            </span>
+          </li>
+          <li class="flex text-gray-400 items-center">
+            <i class="fa-solid fa-envelope mx-3"></i>
+            <span>elgranpale@gmail.com</span>
+          </li>
+        </ul>
+        <ul class="flex lg:flex-row sm:flex-col lg:gap-3 border-t-2">
+          <li>
+            <a href="#servicios"
+              class="flex mr-8 text-xl uppercase lg:px-2 py-2 items-center text-white hover:text-gray-900">
+              <span>
+                Servicios
+              </span>
+            </a>
+          </li>
+          <li class="relative">
+            <menu class="astronav-dropdown group" aria-expanded="false">
+              <button class="flex mr-8 items-center gap-1 w-full lg:w-auto lg:px-2 py-2 text-white hover:text-gray-900">
+                <span class="uppercase text-xl">Habitaciones
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                  stroke="currentColor" class="w-3 h-3 mt-0.5 group-open:rotate-180">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5">
+                  </path>
+                </svg>
+              </button>
+              <div class="astronav-dropdown dropdown-toggle hidden" aria-expanded="false">
+                <div class="lg:absolute w-full lg:w-48 z-10 lg:left-0 origin-top-left ">
+                  <div class="px-3 lg:py-2 lg:bg-black lg:rounded-md lg:shadow lg:border flex flex-col">
+                    <a href="#simples" class="py-1 uppercase text-white hover:text-gray-900"> Habitaciones Simples
+                    </a>
+                    <a href="#dobles" class="py-1 uppercase text-white hover:text-gray-900"> Habitaciones Dobles
+                    </a>
+                    <a href="#matrimoniales" class="py-1 uppercase text-white hover:text-gray-900"> Habitaciones
+                      Matrimoniales
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </menu>
+          </li>
+          <li>
+            <a href="#novedades"
+              class="flex mr-8 text-xl uppercase lg:px-2 py-2 items-center text-white hover:text-gray-900">
+              <span>
+                Novedades
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#el-hotel"
+              class="flex mr-8 text-xl uppercase lg:px-2 py-2 items-center text-white hover:text-gray-900">
+              <span>
+                El hotel
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#contacto"
+              class="flex mr-8 text-xl uppercase lg:px-2 py-2 items-center text-white hover:text-gray-900">
+              <span>
+                Contacto
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <div class="max-w-screen-xl mx-auto px-5">
+    <main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+      <div class="py-4 md:order-1 hidden md:block">
+        <picture>
+          <img src="./imgs/fachada.jpeg" alt="El gran palé" sizes="(max-width: 800px) 100vw, 620px" loading="eager"
+            width="700" decoding="async">
+        </picture>
+      </div>
+      <div>
+        <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+          El Gran Palé
+        </h1>
+        <p class="text-lg mt-4 text-slate-600 max-w-xl">
+          ¡Reserva ya y comienza a ahorrar hoy! Tu hogar lejos del hogar.
+        </p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
+            class="rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-black text-white hover:bg-gray-800  border-2 border-transparent flex gap-1 items-center justify-center">
+            <i class="fa-solid fa-phone mr-2"></i>
+            Contactar
+          </a>
+          <a href="#habitaciones"
+            class="rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-white border-2 border-black hover:bg-gray-100 text-black  flex gap-1 items-center justify-center">
+            <i class="fa-solid fa-bed mr-2"></i>
+            <span>
+              Habitaciones
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
+    <section id="servicios" class="py-8 bg-white sm:py-10 lg:py-16">
+      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl xl:text-5xl">
+            Nuestros servicios </h2>
+          <p class="mt-4 text-base leading-7 text-gray-600 sm:mt-8">
+            Nuestro hotel cuenta con una amplia gama de servicios diseñados para satisfacer todas sus necesidades
+            durante su estancia.
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 items-center mt-10 text-center sm:mt-16 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3 md:gap-0 xl:mt-24">
+          <!-- Feature 1 -->
+          <div class="md:p-8 lg:p-14 flex flex-col justify-center items-center">
+            <div class="w-14 h-14 rounded-full bg-purple-200 flex justify-center items-center">
+              <i class="fa-solid fa-car text-3xl text-gray-900"></i>
+            </div>
+            <h3 class="mt-12 text-xl font-bold text-gray-900">Cochera las 24 horas</h3>
+            <p class="mt-5 text-base text-gray-600">Disfrute de la tranquilidad de nuestra cochera segura, disponible
+              las 24 horas, para que su vehículo esté siempre protegido.</p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 flex flex-col justify-center items-center">
+            <div class="w-14 h-14 rounded-full bg-teal-200 flex justify-center items-center">
+              <i class="fa-solid fa-handshake text-3xl text-gray-900"></i>
+            </div>
+            <h3 class="mt-12 text-xl font-bold text-gray-900">Servicio a la habitación</h3>
+            <p class="mt-5 text-base text-gray-600">Relájese en la comodidad de su habitación con nuestro servicio a la
+              habitación, disponible las 24 horas para lo que necesite.</p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 flex flex-col justify-center items-center">
+            <div class="w-14 h-14 rounded-full bg-yellow-200 flex justify-center items-center">
+              <i class="fa-solid fa-award text-3xl text-gray-900"></i>
+            </div>
+            <h3 class="mt-12 text-xl font-bold text-gray-900">Instalaciones para eventos</h3>
+            <p class="mt-5 text-base text-gray-600">Nuestras instalaciones cuentan con amplias y modernas salas de
+              conferencias, perfectas para la realización de todo tipo.</p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="md:p-8 lg:p-14 md:border-t md:border-gray-200 flex flex-col justify-center items-center">
+            <div class="w-14 h-14 rounded-full bg-red-200 flex justify-center items-center">
+              <i class="fa-solid fa-wifi text-3xl text-gray-900"></i>
+            </div>
+            <h3 class="mt-12 text-xl font-bold text-gray-900">Wi-Fi gratuito</h3>
+            <p class="mt-5 text-base text-gray-600">Contamos con conexión a internet de alta velocidad en todas las
+              habitaciones.</p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div
+            class="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t flex flex-col justify-center items-center">
+            <div class="w-14 h-14 rounded-full bg-green-200 flex justify-center items-center">
+              <i class="fa-solid fa-tv text-3xl text-gray-900"></i>
+            </div>
+            <h3 class="mt-12 text-xl font-bold text-gray-900">Entretenimiento</h3>
+            <p class="mt-5 text-base text-gray-600">Todas nuestras habitaciones están equipadas con televisores
+              inteligentes que incluyen acceso gratuito a Netflix.</p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div
+            class="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t flex flex-col justify-center items-center">
+            <div class="w-14 h-14 rounded-full bg-orange-200 flex justify-center items-center">
+              <i class="fa-solid fa-spa text-3xl text-gray-900"></i>
+            </div>
+            <h3 class="mt-12 text-xl font-bold text-gray-900">Confort moderno</h3>
+            <p class="mt-5 text-base text-gray-600">Nuestras habitaciones están equipadas con mesas de estar, sillones
+              tántricos y agua caliente constante.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="mt-16 md:mt-0" id="habitaciones">
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+        Habitaciones
+      </h2>
+      <p class="text-lg mt-4 text-slate-600">
+        Nuestras habitaciones están diseñadas para satisfacer las diversas necesidades de nuestros huéspedes. Ofrecemos
+        tres tipos de habitaciones: simples, dobles y matrimoniales. Cada tipo está equipado con todas las comodidades
+        necesarias para asegurar una estancia confortable y agradable.
+      </p>
+    </div>
+    <!-- Habitacion simple -->
+    <div class="mx-auto w-11/12 bg-white border rounded-lg overflow-hidden mt-12" id="simples">
+      <div class="p-4">
+        <h2 class="text-4xl font-bold text-gray-900 my-2">Habitaciones simple</h2>
+        <div class="relative mr-4 my-2">
+          <!-- Carousel Container -->
+          <div class="overflow-hidden relative rounded-lg">
+            <!-- Carousel Items -->
+            <div class="flex transition-transform duration-500 ease-in-out" id="carousel-items-1">
+              <div class="min-w-full">
+                <img src="./imgs/habitacion-simple.jpeg" class="w-full">
+              </div>
+              <div class="min-w-full">
+                <img src="./imgs/habitacion-simple-2.jpeg" class="w-full">
+              </div>
+              <div class="min-w-full">
+                <img src="./imgs/habitacion-simple-3.jpeg" class="w-full">
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Controls -->
+          <button
+            class="prev-btn-1 absolute left-0 top-1/2 rounded-full mx-2 h-12 transform -translate-y-1/2 opacity-35 bg-black text-white px-4 py-2 focus:outline-none">
+            <i class="fa-solid fa-arrow-left text-white"></i>
+          </button>
+          <button
+            class="next-btn-1 absolute right-0 top-1/2 rounded-full mx-2 h-12 transform -translate-y-1/2 opacity-35 bg-black text-white px-4 py-2 focus:outline-none">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+        <p id="c_description_1"
+          class="mt-2 text-lg text-gray-800 break-words text-medium line-clamp-2 transition-all duration-300 ease-in-out">
+          Nuestras habitaciones simples ofrecen un refugio acogedor y confortable para nuestros huéspedes. Cada una de
+          estas habitaciones está equipada con una cama de 2 plazas, perfecta para un descanso reparador. Además,
+          encontrará una mesa con dos sillas, ideal para trabajar o disfrutar de una comida en la comodidad de su
+          habitación. Para su entretenimiento, hay una TV de pantalla plana, y para momentos de relajación, un elegante
+          sillón tántrico. Las ventanas ofrecen una vista impresionante de la ciudad, permitiéndole disfrutar de su
+          belleza desde la tranquilidad de su habitación. Estas habitaciones están diseñadas pensando en su comodidad y
+          satisfacción, proporcionando todo lo necesario para una estancia placentera.
+        </p>
+        <button id="toggle-btn_1" class="mt-2 text-black font-bold rounded-lg hover:text-blue-700 focus:outline-none">
+          Más
+        </button>
+      </div>
+    </div>
+
+    <div class="mx-auto w-11/12 bg-white border rounded-lg overflow-hidden mt-12" id="dobles">
+      <div class="p-4">
+        <h2 class="text-4xl font-bold text-gray-900 my-2">Habitaciones dobles</h2>
+        <div class="relative mr-4 my-2">
+          <!-- Carousel Container -->
+          <div class="overflow-hidden relative rounded-lg">
+            <!-- Carousel Items -->
+            <div class="flex transition-transform duration-500 ease-in-out" id="carousel-items-2">
+              <div class="min-w-full">
+                <img src="./imgs/habitacion-doble.jpeg" class="w-full">
+              </div>
+              <div class="min-w-full">
+                <img src="./imgs/habitacion-doble-2.jpeg" class="w-full">
+              </div>
+              <div class="min-w-full">
+                <img src="./imgs/habitacion-doble-3.jpeg" class="w-full">
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Controls -->
+          <button
+            class="prev-btn-2 absolute left-0 top-1/2 rounded-full mx-2 h-12 transform -translate-y-1/2 opacity-35 bg-black text-white px-4 py-2 focus:outline-none">
+            <i class="fa-solid fa-arrow-left text-white"></i>
+          </button>
+          <button
+            class="next-btn-2 absolute right-0 top-1/2 rounded-full mx-2 h-12 transform -translate-y-1/2 opacity-35 bg-black text-white px-4 py-2 focus:outline-none">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+        <p id="c_description_2"
+          class="mt-2 text-lg text-gray-800 break-words text-medium line-clamp-2 transition-all duration-300 ease-in-out">
+          Nuestras habitaciones dobles son espaciosas y están diseñadas para ofrecer el máximo confort a nuestros
+          huéspedes. Cada habitación cuenta con dos camas individuales, perfectas para grupos o parejas que prefieren
+          camas separadas. Además, encontrará una mesa con dos sillas, ideal para trabajar o disfrutar de una comida
+          íntima. Para su entretenimiento, hay una TV de pantalla plana para disfrutar de sus programas favoritos. Las
+          ventanas ofrecen una vista panorámica de la ciudad, permitiéndole disfrutar de su belleza desde la comodidad
+          de su habitación. Estas habitaciones están pensadas para proporcionar todo lo necesario para una estancia
+          agradable y relajante.
+        </p>
+        <button id="toggle-btn_2" class="mt-2 text-black font-bold rounded-lg hover:text-blue-700 focus:outline-none">
+          Más
+        </button>
+      </div>
+    </div>
+  </div>
+  <footer class="text-gray-600 body-font relative bg-black w-full">
+    <div class="container px-5 pt-24 pb-4 mx-auto flex sm:flex-nowrap flex-wrap">
+      <div
+        class="lg:w-2/3 sm:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+        <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0"
+          marginwidth="0" scrolling="no"
+          src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d975.3945856487376!2d-75.20927744395429!3d-12.072506437519543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d-12.072398899071416!2d-75.20950543170628!5e0!3m2!1ses!2spe!4v1721315952398!5m2!1ses!2spe"
+          width="600" height="450"></iframe>
+
+        <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
+          <h3>Hi</h3>
+        </div>
+      </div>
+      <div class="bg-black relative flex flex-wrap py-6 border-2 border-gray-600 rounded shadow-md lg:w-1/3 sm:w-1/3">
+        <div class="rounded-lg">
+          <div class="px-6 py-4">
+            <h3 class="text-lg font-medium text-white">Dirección</h3>
+            <p class="mt-1 text-gray-600"> Jr. Piura 633 / Arequipa Huancayo. , Huancayo, Peru</p>
+          </div>
+          <div class="border-t border-gray-600 px-6 py-4">
+            <h3 class="text-lg font-medium text-white">Horario de atencion</h3>
+            <p class="mt-1 text-gray-600">Lunes - Sábado: Todo el día</p>
+            <p class="mt-1 text-gray-600">Domingo: 7am - 11pm</p>
+          </div>
+          <div class="border-t border-gray-600 px-6 py-4">
+            <h3 class="text-lg font-medium text-white">Contacto</h3>
+            <p class="mt-1 text-gray-600">Email: elgranpale@gmail.com</p>
+            <p class="mt-1 text-gray-600">Teléfono: +51 956 113 939</p>
+          </div>
+          <!-- Social media icons container -->
+          <div class="mb-6 flex space-x-2 mx-6">
+            <a href="#!" type="button"
+              class="rounded-full bg-[#1877f2] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
+              data-twe-ripple-init data-twe-ripple-color="light">
+              <span class="[&>svg]:h-5 [&>svg]:w-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 320 512">
+                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                  <path
+                    d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                </svg>
+              </span>
+            </a>
+
+            <a href="#!" type="button"
+              class="rounded-full bg-[#dd4b39] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
+              data-twe-ripple-init data-twe-ripple-color="light">
+              <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 488 512">
+                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                  <path
+                    d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
+                </svg>
+              </span>
+            </a>
+
+            <a href="#!" type="button"
+              class="rounded-full bg-[#ac2bac] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
+              data-twe-ripple-init data-twe-ripple-color="light">
+              <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+    <!--Copyright section-->
+    <div class="py-2 w-full bg-black text-center">
+      © 2024 Copyright: El Gran Palé
+    </div>
+  </footer>
+
+  <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>
