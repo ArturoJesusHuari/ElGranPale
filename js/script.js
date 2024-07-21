@@ -164,34 +164,28 @@
       });
   }
 })();
-// Función para inicializar los carruseles
-function initCarousel(carouselId, prevBtnClass, nextBtnClass) {
-  const carouselItems = document.getElementById(carouselId);
-  const prevButton = document.querySelector(prevBtnClass);
-  const nextButton = document.querySelector(nextBtnClass);
-  let currentIndex = 0;
 
-  function updateCarousel() {
-    const width = carouselItems.offsetWidth;
-    carouselItems.style.transform = `translateX(-${currentIndex * width}px)`;
-  }
+const carouselItems = document.getElementById('carousel-items');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    let currentIndex = 0;
 
-  nextButton.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % 3;
-    updateCarousel();
-  });
+    function updateCarousel() {
+      const width = carouselItems.offsetWidth;
+      carouselItems.style.transform = `translateX(-${currentIndex * width}px)`;
+    }
 
-  prevButton.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + 3) % 3;
-    updateCarousel();
-  });
+    nextButton.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % 3;
+      updateCarousel();
+    });
 
-  window.addEventListener('resize', updateCarousel);
-}
+    prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + 3) % 3;
+      updateCarousel();
+    });
 
-// Inicializar los carruseles
-initCarousel('carousel-items-1', '.prev-btn-1', '.next-btn-1');
-initCarousel('carousel-items-2', '.prev-btn-2', '.next-btn-2');
+    window.addEventListener('resize', updateCarousel);
 
 
 document.addEventListener('DOMContentLoaded', () => {
