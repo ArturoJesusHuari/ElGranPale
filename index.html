@@ -1,452 +1,552 @@
-<html lang="es">
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./imgs/logo.svg" type="image/x-icon">
-  <title>Hotel - El gran palé</title>
-  <meta name="description" content="Hotel el gran palé de huancayo. Tu hogar lejos del hogar. ">
+  <title>Hotel El Gran Palé | Huancayo</title>
+  <meta name="description" content="Hotel El Gran Palé en Huancayo. Experiencia de hospedaje distinguida, habitaciones impecables, cochera privada 24 horas y atención de primera.">
+  
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
+  
+  <!-- FontAwesome 6 -->
   <script src="https://kit.fontawesome.com/64f1b365fc.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-  <div>
-    <header class="flex flex-col lg:flex-row justify-between items-center px-4 py-5 w-full bg-black">
-      <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/index.html" class="text-lg">
-          <img width="120" src="./imgs/logo.png" alt="logo.png">
-        </a>
-        <div class="block lg:hidden mr-6">
-          <button id="astronav-menu" aria-label="Toggle Menu">
-            <i class="fa-solid fa-bars text-white text-2xl"></i>
+<body class="bg-[#0D0D0D] text-neutral-300 antialiased selection:bg-neutral-800 selection:text-white">
+
+  <!-- HEADER / NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-header">
+    <!-- Top info bar -->
+    <div class="hidden lg:block border-b border-neutral-800/60 py-2.5 px-8 text-xs text-neutral-400 font-light">
+      <div class="max-w-7xl mx-auto flex justify-between items-center tracking-wider">
+        <div class="flex items-center space-x-8">
+          <span class="flex items-center gap-2 hover:text-white transition-colors">
+            <i class="fa-solid fa-phone text-neutral-500 text-[10px]"></i> +51 968 304 090
+          </span>
+          <span class="flex items-center gap-2 hover:text-white transition-colors">
+            <i class="fa-solid fa-location-dot text-neutral-500 text-[10px]"></i> Jr. Piura 633 / Arequipa, Huancayo
+          </span>
+          <span class="flex items-center gap-2 hover:text-white transition-colors">
+            <i class="fa-solid fa-envelope text-neutral-500 text-[10px]"></i> elgranpale@gmail.com
+          </span>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="https://www.facebook.com/profile.php?id=100092353114005" target="_blank" class="text-neutral-400 hover:text-white transition-colors" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f text-xs"></i>
+          </a>
+          <a href="https://wa.me/51975978471" target="_blank" class="text-neutral-400 hover:text-emerald-400 transition-colors" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-4">
+        <img src="./imgs/logo.png" alt="Logo El Gran Palé" class="h-10 w-auto object-contain">
+        <div>
+          <span class="block text-white font-serif-custom text-xl tracking-widest font-normal uppercase">EL GRAN PALÉ</span>
+          <span class="block text-neutral-500 text-[9px] tracking-[0.25em] uppercase">Hotel & Suites</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="hidden lg:flex items-center space-x-10 text-xs font-medium uppercase tracking-[0.15em]">
+        <a href="#servicios" class="text-neutral-300 hover:text-white transition-colors py-1">Servicios</a>
+        
+        <!-- Dropdown Habitaciones -->
+        <div class="relative group">
+          <button class="flex items-center gap-2 text-neutral-300 hover:text-white transition-colors py-2 focus:outline-none uppercase tracking-[0.15em]">
+            <span>Habitaciones</span>
+            <i class="fa-solid fa-chevron-down text-[9px] text-neutral-500 transition-transform group-hover:rotate-180"></i>
           </button>
+          <div class="absolute left-0 mt-1 w-60 bg-[#141414] border border-neutral-800 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-2 z-50">
+            <a href="./simple.html" class="block px-4 py-3 text-xs text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors uppercase tracking-wider">
+              Habitaciones Simples
+            </a>
+            <a href="./doble.html" class="block px-4 py-3 text-xs text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors uppercase tracking-wider">
+              Habitaciones Dobles
+            </a>
+            <a href="./matrimonial.html" class="block px-4 py-3 text-xs text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors uppercase tracking-wider">
+              Habitaciones Matrimoniales
+            </a>
+          </div>
         </div>
-      </div>
-      <nav class="astronav-items astronav-toggle mx-4 hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0 flex-col">
-        <ul class="flex lg:flex-row xl:flex-row flex-col lg:gap-3 mb-3">
-          <li class="text-gray-400 items-center">
-            <i class="fa-solid fa-mobile-screen mx-3"></i>
-            <span>956 113 939</span>
-          </li>
-          <li class="text-gray-400 items-center">
-            <i class="fa-solid fa-location-dot mx-3"></i>
-            <span>
-              Jr. Piura 633 / Arequipa Huancayo. , Huancayo, Peru
-            </span>
-          </li>
-          <li class="flex text-gray-400 items-center">
-            <i class="fa-solid fa-envelope mx-3"></i>
-            <span>elgranpale@gmail.com</span>
-          </li>
-        </ul>
-        <ul class="md:ml-4 sm:ml-4 flex lg:flex-row xl:flex-row flex-col lg:gap-3 border-t-2">
-          <li>
-            <a href="#servicios"
-              class="flex mr-8 text-xl uppercase lg:px-2 py-2 items-center text-white hover:text-gray-900">
-              <span>
-                Servicios
-              </span>
-            </a>
-          </li>
-          <li class="relative">
-            <menu class="astronav-dropdown group" aria-expanded="false">
-              <button class="flex mr-8 items-center gap-1 w-full lg:w-auto lg:px-2 py-2 text-white hover:text-gray-900">
-                <span class="uppercase text-xl">Habitaciones
-                </span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                  stroke="currentColor" class="w-3 h-3 mt-0.5 group-open:rotate-180">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5">
-                  </path>
-                </svg>
-              </button>
-              <div class="astronav-dropdown dropdown-toggle hidden" aria-expanded="false">
-                <div class="lg:absolute w-full lg:w-48 z-10 lg:left-0 origin-top-left ">
-                  <div class="px-3 lg:py-2 lg:bg-black lg:rounded-md lg:shadow lg:border flex flex-col">
-                    <a href="./simple.html" target="_blank" class="py-1 uppercase text-white hover:text-gray-900"> Habitaciones Simples
-                    </a>
-                    <a href="./doble.html" target="_blank" class="py-1 uppercase text-white hover:text-gray-900"> Habitaciones Dobles
-                    </a>
-                    <a href="./matrimonial.html" target="_blank" class="py-1 uppercase text-white hover:text-gray-900"> Habitaciones
-                      Matrimoniales
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </menu>
-          </li>
-          <li>
-            <a href="#novedades"
-              class="flex mr-8 text-xl uppercase lg:px-2 py-2 items-center text-white hover:text-gray-900">
-              <span>
-                Novedades
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#el-hotel"
-              class="flex mr-8 text-xl uppercase lg:px-2 py-2 items-center text-white hover:text-gray-900">
-              <span>
-                El hotel
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#contacto"
-              class="flex mr-8 text-xl uppercase lg:px-2 py-2 items-center text-white hover:text-gray-900">
-              <span>
-                Contacto
-              </span>
-            </a>
-          </li>
-        </ul>
+
+        <a href="#novedades" class="text-neutral-300 hover:text-white transition-colors py-1">Novedades</a>
+        <a href="#el-hotel" class="text-neutral-300 hover:text-white transition-colors py-1">El Hotel</a>
+        <a href="#contacto" class="text-neutral-300 hover:text-white transition-colors py-1">Contacto</a>
       </nav>
-    </header>
-  </div>
-  <div class="max-w-screen-xl mx-auto px-5">
-    <main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
-      <div class="py-4 md:order-1 hidden md:block">
-        <picture>
-          <img src="./imgs/hotel.jpg" alt="El gran palé" sizes="(max-width: 800px) 100vw, 620px" loading="eager"
-            width="700" decoding="async">
-        </picture>
-      </div>
-      <div>
-        <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-          El Gran Palé
-        </h1>
-        <p class="text-lg mt-4 text-slate-600 max-w-xl">
-          ¡Reserva ya y comienza a ahorrar hoy! Tu hogar lejos del hogar.
-        </p>
-        <div class="mt-6 flex flex-col sm:flex-row gap-3">
-          <a href="https://wa.me/51975978471"
-            class="rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-black text-white hover:bg-gray-800  border-2 border-transparent flex gap-1 items-center justify-center">
-            <i class="fa-solid fa-phone mr-2"></i>
-            Contactar
-          </a>
-          <a href="#habitaciones"
-            class="rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-white border-2 border-black hover:bg-gray-100 text-black  flex gap-1 items-center justify-center">
-            <i class="fa-solid fa-bed mr-2"></i>
-            <span>
-              Habitaciones
-            </span>
-          </a>
-        </div>
-      </div>
-    </main>
-    <section id="servicios" class="py-8 bg-white sm:py-10 lg:py-16">
-      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div class="text-center">
-          <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl xl:text-5xl">
-            Nuestros servicios </h2>
-          <p class="mt-4 text-base leading-7 text-gray-600 sm:mt-8">
-            Nuestro hotel cuenta con una amplia gama de servicios diseñados para satisfacer todas sus necesidades
-            durante su estancia.
-          </p>
-        </div>
-        <div
-          class="grid grid-cols-1 items-center mt-10 text-center sm:mt-16 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3 md:gap-0 xl:mt-24">
-          <!-- Feature 1 -->
-          <div class="md:p-8 lg:p-14 flex flex-col justify-center items-center">
-            <div class="w-14 h-14 rounded-full bg-purple-200 flex justify-center items-center">
-              <i class="fa-solid fa-car text-3xl text-gray-900"></i>
-            </div>
-            <h3 class="mt-12 text-xl font-bold text-gray-900">Cochera las 24 horas</h3>
-            <p class="mt-5 text-base text-gray-600">Disfrute de la tranquilidad de nuestra cochera segura, disponible
-              las 24 horas, para que su vehículo esté siempre protegido.</p>
-          </div>
 
-          <!-- Feature 2 -->
-          <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 flex flex-col justify-center items-center">
-            <div class="w-14 h-14 rounded-full bg-teal-200 flex justify-center items-center">
-              <i class="fa-solid fa-handshake text-3xl text-gray-900"></i>
-            </div>
-            <h3 class="mt-12 text-xl font-bold text-gray-900">Servicio a la habitación</h3>
-            <p class="mt-5 text-base text-gray-600">Relájese en la comodidad de su habitación con nuestro servicio a la
-              habitación, disponible las 24 horas para lo que necesite.</p>
-          </div>
-
-          <!-- Feature 3 -->
-          <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 flex flex-col justify-center items-center">
-            <div class="w-14 h-14 rounded-full bg-yellow-200 flex justify-center items-center">
-              <i class="fa-solid fa-award text-3xl text-gray-900"></i>
-            </div>
-            <h3 class="mt-12 text-xl font-bold text-gray-900">Instalaciones para eventos</h3>
-            <p class="mt-5 text-base text-gray-600">Nuestras instalaciones cuentan con amplias y modernas salas de
-              conferencias, perfectas para la realización de todo tipo.</p>
-          </div>
-
-          <!-- Feature 4 -->
-          <div class="md:p-8 lg:p-14 md:border-t md:border-gray-200 flex flex-col justify-center items-center">
-            <div class="w-14 h-14 rounded-full bg-red-200 flex justify-center items-center">
-              <i class="fa-solid fa-wifi text-3xl text-gray-900"></i>
-            </div>
-            <h3 class="mt-12 text-xl font-bold text-gray-900">Wi-Fi gratuito</h3>
-            <p class="mt-5 text-base text-gray-600">Contamos con conexión a internet de alta velocidad en todas las
-              habitaciones.</p>
-          </div>
-
-          <!-- Feature 5 -->
-          <div
-            class="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t flex flex-col justify-center items-center">
-            <div class="w-14 h-14 rounded-full bg-green-200 flex justify-center items-center">
-              <i class="fa-solid fa-tv text-3xl text-gray-900"></i>
-            </div>
-            <h3 class="mt-12 text-xl font-bold text-gray-900">Entretenimiento</h3>
-            <p class="mt-5 text-base text-gray-600">Todas nuestras habitaciones están equipadas con televisores
-              inteligentes que incluyen acceso gratuito a Netflix.</p>
-          </div>
-
-          <!-- Feature 6 -->
-          <div
-            class="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t flex flex-col justify-center items-center">
-            <div class="w-14 h-14 rounded-full bg-orange-200 flex justify-center items-center">
-              <i class="fa-solid fa-spa text-3xl text-gray-900"></i>
-            </div>
-            <h3 class="mt-12 text-xl font-bold text-gray-900">Confort moderno</h3>
-            <p class="mt-5 text-base text-gray-600">Nuestras habitaciones están equipadas con mesas de estar, sillones
-              tántricos y agua caliente constante.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="habitaciones" class="my-8 md:mt-0">
-      <div>
-        <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-          Habitaciones
-        </h2>
-        <p class="text-lg mt-4 text-slate-600">
-          Nuestras habitaciones están diseñadas para satisfacer las diversas necesidades de nuestros huéspedes.
-          Ofrecemos
-          tres tipos de habitaciones: simples, dobles y matrimoniales. Cada tipo está equipado con todas las comodidades
-          necesarias para asegurar una estancia confortable y agradable.
-        </p>
-      </div>
-      <!-- Habitacion simple -->
-      <div class="mx-auto w-11/12 bg-white border rounded-lg overflow-hidden mt-12" id="simples">
-        <div class="p-4">
-          <h2 class="lg:text-4xl xl:text-4xl text-2xl font-bold text-gray-900 my-2">Habitaciones simples</h2>
-          <div class="flex">
-            <img src="./imgs/main/habitacion-simple.jpeg" class="w-1/2 object-contain">
-            <div class="px-5">
-              <div class="xl:mb-8 sm:mb-8 mb-2">
-                <b class="md:text-2xl xl:text-2xl text-lg">S/ 50</b>
-              </div>
-              <ul class="flex flex-col md:flex-row xl:flex-row xl:space-x-4 md:space-x-4">
-                <li class="md:text-lg xl:text-lg text-xs text-gray-700 ">12 m<sup>2</sup></li>
-                <li class="md:text-lg xl:text-lg text-xs text-gray-700 ">1 cama</li>
-                <li class="md:text-lg xl:text-lg text-xs text-gray-700 ">1 baño</li>
-              </ul>
-              <span
-                class="mt-2 mb-6 md:text-lg xl:text-lg text-xs text-gray-800 break-words text-medium line-clamp-2 transition-all duration-300 ease-in-out">
-                Nuestras habitaciones simples ofrecen un refugio acogedor y confortable para nuestros huéspedes. Cada
-                una
-                de
-                estas habitaciones está equipada con una cama de 2 plazas, perfecta para un descanso reparador. Además,
-                encontrará una mesa con dos sillas, ideal para trabajar o disfrutar de una comida en la comodidad de su
-                habitación. Para su entretenimiento, hay una TV de pantalla plana, y para momentos de relajación, un
-                elegante
-                sillón tántrico. Las ventanas ofrecen una vista impresionante de la ciudad, permitiéndole disfrutar de
-                su
-                belleza desde la tranquilidad de su habitación. Estas habitaciones están diseñadas pensando en su
-                comodidad y
-                satisfacción, proporcionando todo lo necesario para una estancia placentera.
-              </span>
-              <a class="px-6 md:py-3 xl:py-3 py-2 text-white font-bold hover:bg-gray-800 bg-black rounded-lg"
-                href="./simple.html" target="_blank">Más</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Habitacion doble -->
-      <div class="mx-auto w-11/12 bg-white border rounded-lg overflow-hidden mt-12" id="dobles">
-        <div class="p-4">
-          <h2 class="lg:text-4xl xl:text-4xl text-2xl font-bold text-gray-900 my-2">Habitaciones dobles</h2>
-          <div class="flex">
-            <img src="./imgs/main/habitacion-doble.jpeg" class="w-1/2 object-contain">
-            <div class="px-5">
-              <div class="xl:mb-8 sm:mb-8 mb-2">
-                <b class="md:text-2xl xl:text-2xl text-lg">S/ 90 o 140</b>
-              </div>
-              <ul class="flex flex-col md:flex-row xl:flex-row xl:space-x-4 md:space-x-4">
-                <li class="md:text-lg xl:text-lg text-xs text-gray-700 ">18 m<sup>2</sup></li>
-                <li class="md:text-lg xl:text-lg text-xs text-gray-700 ">2 camas</li>
-                <li class="md:text-lg xl:text-lg text-xs text-gray-700 ">1 baño</li>
-              </ul>
-              <span
-                class="mt-2 mb-6 md:text-lg xl:text-lg text-xs text-gray-800 break-words text-medium line-clamp-2 transition-all duration-300 ease-in-out">
-                Nuestras habitaciones dobles son espaciosas y están diseñadas para ofrecer el máximo confort a nuestros
-                huéspedes. Cada habitación cuenta con dos camas individuales, perfectas para grupos o parejas que
-                prefieren
-                camas separadas. Además, encontrará una mesa con dos sillas, ideal para trabajar o disfrutar de una
-                comida
-                íntima. Para su entretenimiento, hay una TV de pantalla plana para disfrutar de sus programas favoritos.
-                Las
-                ventanas ofrecen una vista panorámica de la ciudad, permitiéndole disfrutar de su belleza desde la
-                comodidad
-                de su habitación. Estas habitaciones están pensadas para proporcionar todo lo necesario para una
-                estancia
-                agradable y relajante.
-              </span>
-              <a class="px-6 md:py-3 xl:py-3 py-2 text-white font-bold hover:bg-gray-800 bg-black rounded-lg"
-                href="./doble.html" target="_blank">Más</a>
-            </div>
-          </div>
-        </div>
+      <!-- CTA Nav button -->
+      <div class="hidden lg:block">
+        <a href="https://wa.me/51975978471?text=Hola,%20deseo%20realizar%20una%20reserva" target="_blank" class="btn-luxe-outline">
+          Reservar Estancia
+        </a>
       </div>
 
-      <!-- Habitacion matrimonial -->
-      <div class="mx-auto w-11/12 bg-white border rounded-lg overflow-hidden mt-12" id="matrimoniales">
-        <div class="p-4">
-          <h2 class="lg:text-4xl xl:text-4xl text-2xl font-bold text-gray-900 my-2">Habitaciones matrimoniales</h2>
-          <div class="flex">
-            <img src="./imgs/main/habitacion-matrimonial.jpeg" class="w-1/2 object-contain">
-            <div class="px-5">
-              <div class="xl:mb-8 sm:mb-8 mb-2">
-                <b class="md:text-2xl xl:text-2xl text-lg">S/ 70</b>
-              </div>
-              <ul class="flex flex-col md:flex-row xl:flex-row xl:space-x-4 md:space-x-4">
-                <li class="md:text-lg xl:text-lg text-xs text-gray-700 ">18 m<sup>2</sup></li>
-                <li class="md:text-lg xl:text-lg text-xs text-gray-700 ">1 cama</li>
-                <li class="md:text-lg xl:text-lg text-xs text-gray-700 ">1 baño</li>
-                <li class="md:text-lg xl:text-lg text-xs text-gray-700 ">1 closet</li>
-              </ul>
-              <span
-                class="mt-2 mb-6 md:text-lg xl:text-lg text-xs text-gray-800 break-words text-medium line-clamp-2 transition-all duration-300 ease-in-out">
-                Nuestras habitaciones matrimoniales están diseñadas para proporcionar una experiencia cómoda y acogedora
-                para parejas. Cada habitación cuenta con una amplia cama matrimonial, perfecta para un descanso
-                reparador. Además, encontrará un baño privado equipado con todas las comodidades necesarias para su
-                confort. La habitación también dispone de un espacioso closet, ideal para guardar su ropa y pertenencias
-                personales de manera ordenada.
-              </span>
-              <a class="px-6 md:py-3 xl:py-3 py-2 text-white font-bold hover:bg-gray-800 bg-black rounded-lg"
-                href="./matrimonial.html" target="_blank">Más</a>
-            </div>
+      <!-- Mobile Menu Button -->
+      <button id="astronav-menu" aria-label="Abrir menú" class="lg:hidden text-neutral-200 p-2 focus:outline-none">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#111111] border-t border-neutral-800 px-6 py-8">
+      <ul class="flex flex-col space-y-5 text-sm uppercase tracking-widest font-light">
+        <li>
+          <a href="#servicios" class="mobile-nav-link text-neutral-300 hover:text-white block">Servicios</a>
+        </li>
+        <li class="border-y border-neutral-800/80 py-3">
+          <span class="text-xs font-semibold text-neutral-500 uppercase tracking-widest block mb-3">Habitaciones</span>
+          <div class="pl-4 flex flex-col space-y-3">
+            <a href="./simple.html" class="text-neutral-300 hover:text-white text-xs block">Simples</a>
+            <a href="./doble.html" class="text-neutral-300 hover:text-white text-xs block">Dobles</a>
+            <a href="./matrimonial.html" class="text-neutral-300 hover:text-white text-xs block">Matrimoniales</a>
           </div>
-        </div>
-      </div>
-    </section>
-    <section id="novedades" class="py-8 bg-white sm:py-10 lg:py-16 w-full">
-      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 justify-center">
-        <div class="text-center">
-          <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl xl:text-5xl">
-            Novedades
-          </h2>
-          <p class="mt-4 text-base leading-7 text-gray-600 sm:mt-8">
-            Esté atento a estas mejoras que estamos seguros harán de su estancia una experiencia aún más agradable.
-            ¡Esperamos darle la bienvenida pronto!. <b>Proximamente...</b>
-          </p>
-        </div>
-        <div
-          class="text-gray-700 justify-center body-font mt-6 mx-6 flex flex-col md:flex-row xl:flex-row space-y-4 md:space-y-0 xl:space-y-0 md:space-x-4 xl:space-x-4 space-x-0">
-          <img src="./imgs/main/ascensor.webp" alt="Ascensor"
-            class="aspect-[2/3] xl:aspect-[1/1] md:aspect-[3/4] h-80 object-cover rounded-lg transition-transform transform scale-100 hover:scale-105" />
-          <img src="./imgs/main/jacuzzi.jpg" alt="Ascensor"
-            class="aspect-[2/3] xl:aspect-[1/1] md:aspect-[3/4]  h-80 object-cover rounded-lg transition-transform transform scale-100 hover:scale-105" />
-          <img src="./imgs/main/minibar.jpg" alt="Ascensor"
-            class="aspect-[2/3] xl:aspect-[1/1] md:aspect-[3/4]  h-80 object-cover rounded-lg transition-transform transform scale-100 hover:scale-105" />
-        </div>
-      </div>
-    </section>
-    <section id="el-hotel" class="py-8 bg-white sm:py-10 lg:py-16 w-full">
-      <div class="px-4 mx-auto sm:px-6 lg:px-8 justify-center">
-        <div class="text-center">
-          <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl xl:text-5xl">
-            El Hotel
-          </h2>
-        </div>
-      </div>
-      <div class="mx-auto py-8 px-4 lg:py-16 lg:px-6 justify-center">
-        <div class="flex flex-col xl:flex-row md:flex-row">
-          <div class="mr-0 md:mr-8 mb-6 md:mb-0 w-full xl:w-1/2 md:w-1/2 flex justify-center">
-            <img class="w-11/12" src="./imgs/fachada.jpeg">
-          </div>
-          <!-- end can help image -->
-          <div class="w-full xl:w-1/2 md:w-1/2 flex flex-wrap">
-            <div class="w-full mb-4 px-2 ">
-              <div class="py-4 px-6 border border-gray-200 border-t-0 border-l-0 rounded-br-xl">
-                <h3 class="text-2xl font-bold text-md mb-6">Misión</h3>
-                <p class="text-sm">Nuestra misión es brindar una experiencia de hospedaje excepcional en el corazón de Huancayo, combinando comodidad, servicio de alta calidad y un profundo respeto por la cultura y tradiciones locales. Nos comprometemos a satisfacer las necesidades de nuestros huéspedes, ofreciendo un ambiente acogedor y servicios personalizados que superen sus expectativas.</p>
-              </div>
-            </div>
-            <div class="w-full mb-4 px-2 ">
-              <div class="py-4 px-6 border border-gray-200 border-t-0 border-l-0 rounded-br-xl">
-                <h3 class="text-2xl font-bold text-md mb-6">Visión</h3>
-                <p class="text-sm">Ser el hotel líder en Huancayo, reconocido por nuestra hospitalidad incomparable, nuestra dedicación a la excelencia y nuestra conexión auténtica con la cultura y el entorno local. Aspiramos a ser el destino preferido para viajeros.</p>
-              </div>
-            </div>
-            <div class="w-full mb-4 px-2 ">
-              <div class="py-4 px-6 border border-gray-200 border-t-0 border-l-0 rounded-br-xl">
-                <h3 class="text-2xl font-bold text-md mb-6">Fundación</h3>
-                <p class="text-sm">La empresa tuvo su inició en el 2010, con el nombre de "El Topo".Pero se constituyo formalmente con el nombre de “El Gran Pale” en el 2020.
-                  Reseña Histórica
-                  "HOTEL - HOSTAL GRAN PALE" es un ejemplo de perseverancia y visión empresarial en la hospitalidad. Iniciado en una modesta casona, en el año 2019, comenzó la construcción de un nuevo edificio moderno , en la actualidad la  empresa sigue comprometida con la excelencia y tiene una proyección de  10 pisos.El  "Gran Pale" continúa mejorando su infraestructura y servicios para ofrecer a sus huéspedes una experiencia cómoda y memorable.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  <footer id="contacto" class="text-gray-600 body-font relative bg-black w-full">
-    <div class="w-full relative flex containter justify-between px-5 pt-2 pb-2 border-b">
-      <img class="w-1/12" src="./imgs/logo.png" alt="logo.png">
-      <div class="flex items-center mx-6">
-        <h2 class="lg:text-2xl xl:text-2xl text-lg text-white">Métodos de pago</h2>
-        <div class="flex items-center mx-4 justify-between space-x-2">
-          <img width="35" src="./imgs/footer/visa.png" alt="visa">
-          <img width="35" src="./imgs/footer/master.png" alt="master">
-          <img width="35" src="./imgs/footer/express.png" alt="express">
-        </div>
+        </li>
+        <li>
+          <a href="#novedades" class="mobile-nav-link text-neutral-300 hover:text-white block">Novedades</a>
+        </li>
+        <li>
+          <a href="#el-hotel" class="mobile-nav-link text-neutral-300 hover:text-white block">El Hotel</a>
+        </li>
+        <li>
+          <a href="#contacto" class="mobile-nav-link text-neutral-300 hover:text-white block">Contacto</a>
+        </li>
+      </ul>
+      <div class="mt-8 pt-4">
+        <a href="https://wa.me/51975978471" target="_blank" class="w-full btn-luxe-primary text-center block">
+          Reservar por WhatsApp
+        </a>
       </div>
     </div>
-    <div class="w-full justify-between container px-5 pt-12 pb-4 mx-auto flex sm:flex-col md:flex-row flex-wrap">
-      <div class="lg:my-0 md:my-10 flex lg:w-2/3 w-full bg-gray-300 rounded-lg overflow-hidden p-2 relative">
-        <iframe width="100%" height="100%" class="w-full justify-center" frameborder="0" title="map" marginheight="0"
-          marginwidth="0" scrolling="no"
-          src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d975.3945856487376!2d-75.20927744395429!3d-12.072506437519543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d-12.072398899071416!2d-75.20950543170628!5e0!3m2!1ses!2spe!4v1721315952398!5m2!1ses!2spe"></iframe>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative min-h-screen flex items-center pt-32 pb-24 bg-[#0D0D0D]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+      <div class="grid lg:grid-cols-12 gap-16 items-center">
+        
+        <!-- Hero Text Editorial Layout -->
+        <div class="lg:col-span-7 space-y-8">
+          <div class="space-y-3">
+            <span class="text-xs uppercase tracking-[0.3em] text-neutral-400 font-light block">Huancayo, Perú</span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl text-white font-normal leading-[1.15] font-serif-custom">
+              Confort & <br>
+              <span class="italic font-normal text-neutral-300">tranquilidad absoluta.</span>
+            </h1>
+          </div>
+
+          <p class="text-neutral-400 text-base sm:text-lg font-light leading-relaxed max-w-xl">
+            Bienvenido a El Gran Palé. Un espacio diseñado para brindar descanso de primer nivel, privacidad y una hospitalidad atenta en una ubicación privilegiada.
+          </p>
+
+          <div class="pt-4 flex flex-col sm:flex-row gap-5">
+            <a href="https://wa.me/51975978471?text=Hola,%20deseo%20reservar%20una%20habitación" target="_blank" class="btn-luxe-primary text-center">
+              Reservar Habitación
+            </a>
+            <a href="#habitaciones" class="btn-luxe-outline text-center">
+              Ver habitaciones
+            </a>
+          </div>
+
+          <!-- Subtle Stats -->
+          <div class="pt-12 border-t border-neutral-800/80 grid grid-cols-3 gap-8">
+            <div>
+              <span class="block text-white font-serif-custom text-2xl">24 / 7</span>
+              <span class="text-neutral-500 text-[11px] uppercase tracking-wider font-light">Cochera & Recepción</span>
+            </div>
+            <div>
+              <span class="block text-white font-serif-custom text-2xl">Wi-Fi</span>
+              <span class="text-neutral-500 text-[11px] uppercase tracking-wider font-light">Fibra Óptica</span>
+            </div>
+            <div>
+              <span class="block text-white font-serif-custom text-2xl">Ubicación</span>
+              <span class="text-neutral-500 text-[11px] uppercase tracking-wider font-light">Céntrica & Segura</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Photo Frame -->
+        <div class="lg:col-span-5">
+          <div class="relative border border-neutral-800 p-3 bg-[#111111]">
+            <img src="./imgs/hotel.jpg" alt="Fachada Hotel El Gran Palé" class="w-full h-[500px] object-cover filter contrast-[1.05]">
+            <div class="p-4 bg-[#0D0D0D] border-t border-neutral-800 mt-3 text-center">
+              <span class="text-xs uppercase tracking-widest text-neutral-400 font-serif-custom">Hotel El Gran Palé</span>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <div
-        class="sm:w-full md:w-full w-full px-2 sm:pt-6 bg-black relative flex sm:flex-col flex-wrap py-6 shadow-md overflow-hidden relative lg:w-1/3 xl:w-1/3">
-        <div class="border-2 border-gray-600 rounded h-full">
-          <div class="px-6 py-4">
-            <h3 class="text-lg font-medium text-white">Dirección</h3>
-            <p class="mt-1 text-gray-600"> Jr. Piura 633 / Arequipa Huancayo. , Huancayo, Peru</p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN SERVICIOS -->
+  <section id="servicios" class="py-28 bg-[#111111] border-y border-neutral-800">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      
+      <div class="max-w-2xl space-y-3 mb-20">
+        <span class="text-xs uppercase tracking-[0.25em] text-neutral-500">Distinción & Comodidad</span>
+        <h2 class="text-3xl sm:text-4xl text-white font-serif-custom">Nuestros Servicios</h2>
+        <p class="text-neutral-400 font-light text-sm">
+          Cada detalle de nuestras instalaciones está pensado para responder a los estándares más exigentes de nuestros huéspedes.
+        </p>
+      </div>
+
+      <!-- Services Clean List Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+        
+        <!-- Item 1 -->
+        <div class="space-y-4 border-t border-neutral-800 pt-6">
+          <div class="text-neutral-400 text-xl">
+            <i class="fa-solid fa-square-parking"></i>
           </div>
-          <div class="border-t border-gray-600 px-6 py-4">
-            <h3 class="text-lg font-medium text-white">Horario de atencion</h3>
-            <p class="mt-1 text-gray-600">Lunes - Sábado: Todo el día</p>
-            <p class="mt-1 text-gray-600">Domingo: 7am - 11pm</p>
+          <h3 class="text-lg text-white font-serif-custom font-normal">Cochera Privada 24H</h3>
+          <p class="text-neutral-400 font-light text-xs leading-relaxed">
+            Estacionamiento exclusivo y vigilado permanentemente para garantizar total seguridad y tranquilidad durante su estadía.
+          </p>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="space-y-4 border-t border-neutral-800 pt-6">
+          <div class="text-neutral-400 text-xl">
+            <i class="fa-solid fa-bell"></i>
           </div>
-          <div class="border-t border-gray-600 px-6 py-4">
-            <h3 class="text-lg font-medium text-white">Contacto</h3>
-            <p class="mt-1 text-gray-600">Email: elgranpale@gmail.com</p>
-            <p class="mt-1 text-gray-600">Teléfono: +51 956 113 939</p>
+          <h3 class="text-lg text-white font-serif-custom font-normal">Atención a la Habitación</h3>
+          <p class="text-neutral-400 font-light text-xs leading-relaxed">
+            Personal dispuesto a atender sus solicitudes de forma rápida, prudente y respetuosa en todo momento.
+          </p>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="space-y-4 border-t border-neutral-800 pt-6">
+          <div class="text-neutral-400 text-xl">
+            <i class="fa-solid fa-building-columns"></i>
           </div>
-          <!-- Social media icons container -->
-          <div class="mb-6 flex space-x-2 mx-6">
-            <a href="https://www.facebook.com/profile.php?id=100092353114005&mibextid=ZbWKwL" type="button"
-            target="_blank"
-              class="rounded-full bg-[#1877f2] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
-              data-twe-ripple-init="" data-twe-ripple-color="light">
-              <span class="[&amp;>svg]:h-5 [&amp;>svg]:w-5">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 320 512">
-                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
-                  <path
-                    d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z">
-                  </path>
-                </svg>
-              </span>
+          <h3 class="text-lg text-white font-serif-custom font-normal">Instalaciones para Eventos</h3>
+          <p class="text-neutral-400 font-light text-xs leading-relaxed">
+            Espacios adecuados para reuniones corporativas, conferencias o celebraciones especiales.
+          </p>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="space-y-4 border-t border-neutral-800 pt-6">
+          <div class="text-neutral-400 text-xl">
+            <i class="fa-solid fa-wifi"></i>
+          </div>
+          <h3 class="text-lg text-white font-serif-custom font-normal">Conexión de Alta Velocidad</h3>
+          <p class="text-neutral-400 font-light text-xs leading-relaxed">
+            Internet ininterrumpido en todas las áreas para trabajar cómodamente o mantenerse conectado sin sobresaltos.
+          </p>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="space-y-4 border-t border-neutral-800 pt-6">
+          <div class="text-neutral-400 text-xl">
+            <i class="fa-solid fa-tv"></i>
+          </div>
+          <h3 class="text-lg text-white font-serif-custom font-normal">Smart TV & Streaming</h3>
+          <p class="text-neutral-400 font-light text-xs leading-relaxed">
+            Pantallas de alta definición equipadas con acceso a plataformas de entretenimiento para sus horas de reposo.
+          </p>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="space-y-4 border-t border-neutral-800 pt-6">
+          <div class="text-neutral-400 text-xl">
+            <i class="fa-solid fa-shower"></i>
+          </div>
+          <h3 class="text-lg text-white font-serif-custom font-normal">Agua Caliente Constante</h3>
+          <p class="text-neutral-400 font-light text-xs leading-relaxed">
+            Sistema termofónico continuo las 24 horas y mobiliario confortable seleccionado para su pleno descanso.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN HABITACIONES -->
+  <section id="habitaciones" class="py-28 bg-[#0D0D0D]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      
+      <div class="max-w-2xl space-y-3 mb-20">
+        <span class="text-xs uppercase tracking-[0.25em] text-neutral-500">Alojamiento Exclusivo</span>
+        <h2 class="text-3xl sm:text-4xl text-white font-serif-custom">Habitaciones</h2>
+      </div>
+
+      <!-- Catalogue Showcase Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        
+        <!-- Room 1: Simple -->
+        <div class="bg-[#111111] border border-neutral-800/80 flex flex-col justify-between p-6">
+          <div class="space-y-6">
+            <div class="h-64 overflow-hidden border border-neutral-800">
+              <img src="./imgs/main/habitacion-simple.jpeg" alt="Habitación Simple El Gran Palé" class="w-full h-full object-cover transition-all duration-500">
+            </div>
+            <div>
+              <div class="flex justify-between items-baseline mb-2">
+                <h3 class="text-2xl text-white font-serif-custom">Habitación Simple</h3>
+                <span class="text-sm font-serif-custom text-neutral-300">S/ 50 <span class="text-[10px] text-neutral-500 font-sans">/ noche</span></span>
+              </div>
+              <p class="text-xs text-neutral-400 font-light leading-relaxed mt-3">
+                Un entorno acogedor con cama de 2 plazas, mesa ejecutiva, TV de pantalla plana y vistas hacia la ciudad.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-neutral-800 text-[11px] text-neutral-400 flex gap-6">
+              <span>12 m²</span>
+              <span>1 Cama</span>
+              <span>Baño Privado</span>
+            </div>
+          </div>
+          <div class="pt-6">
+            <a href="./simple.html" target="_blank" class="block w-full py-3 text-center border border-neutral-700 text-white text-xs uppercase tracking-widest hover:border-white transition-colors">
+              Ver Detalle
             </a>
           </div>
         </div>
+
+        <!-- Room 2: Doble -->
+        <div class="bg-[#111111] border border-neutral-800/80 flex flex-col justify-between p-6">
+          <div class="space-y-6">
+            <div class="h-64 overflow-hidden border border-neutral-800">
+              <img src="./imgs/main/habitacion-doble.jpeg" alt="Habitación Doble El Gran Palé" class="w-full h-full object-cover transition-all duration-500">
+            </div>
+            <div>
+              <div class="flex justify-between items-baseline mb-2">
+                <h3 class="text-2xl text-white font-serif-custom">Habitación Doble</h3>
+                <span class="text-sm font-serif-custom text-neutral-300">S/ 90 - 140 <span class="text-[10px] text-neutral-500 font-sans">/ noche</span></span>
+              </div>
+              <p class="text-xs text-neutral-400 font-light leading-relaxed mt-3">
+                Espaciosa y funcional, equipada con dos camas individuales, comedor auxiliar y vista panorámica.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-neutral-800 text-[11px] text-neutral-400 flex gap-6">
+              <span>18 m²</span>
+              <span>2 Camas</span>
+              <span>Baño Privado</span>
+            </div>
+          </div>
+          <div class="pt-6">
+            <a href="./doble.html" target="_blank" class="block w-full py-3 text-center border border-neutral-700 text-white text-xs uppercase tracking-widest hover:border-white transition-colors">
+              Ver Detalle
+            </a>
+          </div>
+        </div>
+
+        <!-- Room 3: Matrimonial -->
+        <div class="bg-[#111111] border border-neutral-800/80 flex flex-col justify-between p-6">
+          <div class="space-y-6">
+            <div class="h-64 overflow-hidden border border-neutral-800">
+              <img src="./imgs/main/habitacion-matrimonial.jpeg" alt="Habitación Matrimonial El Gran Palé" class="w-full h-full object-cover transition-all duration-500">
+            </div>
+            <div>
+              <div class="flex justify-between items-baseline mb-2">
+                <h3 class="text-2xl text-white font-serif-custom">Habitación Matrimonial</h3>
+                <span class="text-sm font-serif-custom text-neutral-300">S/ 70 <span class="text-[10px] text-neutral-500 font-sans">/ noche</span></span>
+              </div>
+              <p class="text-xs text-neutral-400 font-light leading-relaxed mt-3">
+                Pensada para el descanso en pareja. Ambiente sobrio con amplia cama matrimonial y closet espacioso.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-neutral-800 text-[11px] text-neutral-400 flex gap-6">
+              <span>18 m²</span>
+              <span>1 Cama Matrimonial</span>
+              <span>Closet</span>
+            </div>
+          </div>
+          <div class="pt-6">
+            <a href="./matrimonial.html" target="_blank" class="block w-full py-3 text-center border border-neutral-700 text-white text-xs uppercase tracking-widest hover:border-white transition-colors">
+              Ver Detalle
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
-    <!--Copyright section-->
-    <div class="py-2 w-full bg-black text-center">
-      © 2024 Copyright: El Gran Palé
+  </section>
+
+  <!-- SECCIÓN NOVEDADES -->
+  <section id="novedades" class="py-28 bg-[#111111] border-t border-neutral-800">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="max-w-2xl space-y-3 mb-16">
+        <span class="text-xs uppercase tracking-[0.25em] text-neutral-500">Evolución Constante</span>
+        <h2 class="text-3xl sm:text-4xl text-white font-serif-custom">Próximas Instalaciones</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="border border-neutral-800 p-4 bg-[#0D0D0D] space-y-4">
+          <div class="h-64 overflow-hidden">
+            <img src="./imgs/main/ascensor.webp" alt="Ascensor" class="w-full h-full object-cover filter contrast-[1.05]">
+          </div>
+          <div class="pt-2">
+            <span class="text-[10px] uppercase tracking-widest text-neutral-500 block mb-1">En Proyecto</span>
+            <h3 class="text-xl text-white font-serif-custom">Ascensor Panorámico</h3>
+          </div>
+        </div>
+
+        <div class="border border-neutral-800 p-4 bg-[#0D0D0D] space-y-4">
+          <div class="h-64 overflow-hidden">
+            <img src="./imgs/main/jacuzzi.jpg" alt="Jacuzzi" class="w-full h-full object-cover filter contrast-[1.05]">
+          </div>
+          <div class="pt-2">
+            <span class="text-[10px] uppercase tracking-widest text-neutral-500 block mb-1">En Proyecto</span>
+            <h3 class="text-xl text-white font-serif-custom">Zona de Jacuzzi</h3>
+          </div>
+        </div>
+
+        <div class="border border-neutral-800 p-4 bg-[#0D0D0D] space-y-4">
+          <div class="h-64 overflow-hidden">
+            <img src="./imgs/main/minibar.jpg" alt="Minibar" class="w-full h-full object-cover filter contrast-[1.05]">
+          </div>
+          <div class="pt-2">
+            <span class="text-[10px] uppercase tracking-widest text-neutral-500 block mb-1">En Proyecto</span>
+            <h3 class="text-xl text-white font-serif-custom">Minibar en Habitación</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN EL HOTEL -->
+  <section id="el-hotel" class="py-28 bg-[#0D0D0D]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-16 items-center">
+        
+        <div class="lg:col-span-5">
+          <div class="border border-neutral-800 p-3 bg-[#111111]">
+            <img src="./imgs/fachada.jpeg" alt="Fachada El Gran Palé" class="w-full h-[450px] object-cover">
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-10">
+          <div>
+            <span class="text-xs uppercase tracking-[0.25em] text-neutral-500">Nuestra Identidad</span>
+            <h2 class="text-3xl sm:text-4xl text-white font-serif-custom mt-2">Sobre El Gran Palé</h2>
+          </div>
+
+          <div class="space-y-8 border-l border-neutral-800 pl-8">
+            <div class="space-y-2">
+              <h3 class="text-xl text-white font-serif-custom">Misión</h3>
+              <p class="text-xs text-neutral-400 font-light leading-relaxed">
+                Brindar una experiencia de hospedaje acogedora y respetuosa en Huancayo, priorizando la tranquilidad, limpieza impecable y la atención cálida para cada huésped.
+              </p>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-xl text-white font-serif-custom">Visión</h3>
+              <p class="text-xs text-neutral-400 font-light leading-relaxed">
+                Consolidarnos como el hospedaje preferido por viajeros que valoran la serenidad y la buena atención en el centro de la ciudad.
+              </p>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-xl text-white font-serif-custom">Trayectoria</h3>
+              <p class="text-xs text-neutral-400 font-light leading-relaxed">
+                Iniciados en 2010 como "El Topo" y constituidos formalmente como "El Gran Palé" en 2020. Una trayectoria continua orientada a la constante mejora de nuestra infraestructura.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FIRMA DEL DESARROLLADOR AH STUDIO (Elegante & Minimalista) -->
+  <section class="py-20 ah-signature-container">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-10">
+        
+        <!-- Dev Credits Details -->
+        <div class="space-y-3 max-w-xl">
+          <span class="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-medium">Diseño & Desarrollo Web</span>
+          <h3 class="text-2xl text-white font-serif-custom">
+            Desarrollado por <span class="text-neutral-200">Arturo Huari</span> — <span class="italic text-neutral-400">AH Studio</span>
+          </h3>
+          <p class="text-xs text-neutral-400 font-light leading-relaxed">
+            Soluciones web modernas y a medida para hoteles, restaurantes y negocios que buscan transmitir profesionalismo y elegancia. ¿Deseas renovar tu sitio web?
+          </p>
+
+          <div class="flex flex-wrap items-center gap-6 pt-2 text-xs text-neutral-400 font-light">
+            <a href="https://wa.me/51975978471" target="_blank" class="hover:text-white transition-colors flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-neutral-500"></i> 975978471
+            </a>
+            <a href="mailto:arturo.huari.dev@gmail.com" class="hover:text-white transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-neutral-500"></i> arturo.huari.dev@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/arturohuari/" target="_blank" class="hover:text-white transition-colors flex items-center gap-2">
+              <i class="fa-brands fa-linkedin text-neutral-500"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Dev CTA Button -->
+        <div>
+          <a href="https://wa.me/51975978471?text=Hola%20Arturo,%20quisiera%20conversar%20sobre%20un%20proyecto%20web" target="_blank" class="btn-luxe-outline text-center block whitespace-nowrap">
+            Hablemos de tu proyecto
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contacto" class="bg-[#0A0A0A] text-neutral-500 border-t border-neutral-900 py-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      
+      <!-- Top Info -->
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center pb-12 border-b border-neutral-900 gap-6">
+        <div>
+          <span class="text-white font-serif-custom text-2xl uppercase tracking-widest">El Gran Palé</span>
+          <p class="text-xs text-neutral-500 font-light mt-1">Jr. Piura 633 / Arequipa, Huancayo, Perú</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="text-[10px] uppercase tracking-widest text-neutral-600">Métodos de pago:</span>
+          <div class="flex gap-2 opacity-60">
+            <img src="./imgs/footer/visa.png" alt="Visa" class="h-6">
+            <img src="./imgs/footer/master.png" alt="Mastercard" class="h-6">
+            <img src="./imgs/footer/express.png" alt="Amex" class="h-6">
+          </div>
+        </div>
+      </div>
+
+      <!-- Map & Contact Info Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-12">
+        <div class="lg:col-span-7 h-72 border border-neutral-900 overflow-hidden filter grayscale contrast-125">
+          <iframe width="100%" height="100%" frameborder="0" title="Ubicación Hotel El Gran Palé" marginheight="0" marginwidth="0" scrolling="no"
+            src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d975.3945856487376!2d-75.20927744395429!3d-12.072506437519543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d-12.072398899071416!2d-75.20950543170628!5e0!3m2!1ses!2spe!4v1721315952398!5m2!1ses!2spe"></iframe>
+        </div>
+
+        <div class="lg:col-span-5 space-y-6 text-xs font-light">
+          <div class="space-y-1">
+            <span class="text-white font-medium block">Atención en Recepción</span>
+            <p class="text-neutral-500">Lunes - Sábado: 24 Horas</p>
+            <p class="text-neutral-500">Domingo: 7:00 am - 11:00 pm</p>
+          </div>
+          <div class="space-y-1 pt-4 border-t border-neutral-900">
+            <span class="text-white font-medium block">Contacto Directo</span>
+            <p class="text-neutral-500">elgranpale@gmail.com</p>
+            <p class="text-neutral-500">+51 968 304 090</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 pt-8 border-t border-neutral-900 text-center text-[10px] text-neutral-600 uppercase tracking-widest">
+        © 2026 Hotel El Gran Palé. Todos los derechos reservados.
+      </div>
     </div>
   </footer>
+
   <script type="module" src="./js/script.js"></script>
 </body>
 
